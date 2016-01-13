@@ -27,6 +27,7 @@ VIRTUALENV_DIR=/home/vagrant/.virtualenvs/$PROJECT_NAME
 
 TEMPLATES_DIR=/vagrant/etc/templates
 REQUIREMENT_FILE_TEMPLATE_PATH=$TEMPLATES_DIR/requirements.txt
+GITIGNORE_FILE_TEMPLATE_PATH=$TEMPLATES_DIR/template.gitignore
 
 # create database
 createdb $DB_NAME &> /dev/null
@@ -49,6 +50,7 @@ else
     echo -e "${LRED}'$PROJECT_NAME' virtualenv Not exist. ${LGREEN}Create...${NC}"
     /usr/local/bin/virtualenv $VIRTUALENV_DIR --python=/usr/bin/python3.4 &> /dev/null
     cp -p $REQUIREMENT_FILE_TEMPLATE_PATH $PROJECT_DIR
+    cp -p $GITIGNORE_FILE_TEMPLATE_PATH $PROJECT_DIR/.gitignore
 fi
 cd $PROJECT_DIR
 workon $PROJECT_NAME

@@ -1,2 +1,4 @@
-.vagrant
+/.vagrant
+/static
 *.box
+*.pyc
