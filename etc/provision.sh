@@ -36,7 +36,7 @@ fi
 cp -p $GLOBAL_CONFIGURATIONS_DIR/bashrc /home/vagrant/.bashrc
 
 # To start_project script from any directory
-cp -p $GLOBAL_CONFIGURATIONS_DIR/start_project /usr/local/bin/
+cp -p $GLOBAL_CONFIGURATIONS_DIR/start_project.sh /usr/local/bin/
 
 # Node.js
 if ! command -v npm; then
