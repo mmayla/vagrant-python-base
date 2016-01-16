@@ -1,3 +1,4 @@
+cookiecutter
 Django>=1.9,<1.10
 psycopg2>=2.6
 django-compressor>=1.6
