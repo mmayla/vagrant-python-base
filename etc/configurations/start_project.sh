@@ -10,8 +10,8 @@ LGREEN='\033[1;32m'
 # Script to start Django project
 # Or create it then start it if not exist
 
-if [ "$#" -ne 1 ]; then
-    echo "Invalid number of arguments, please enter the name of the project"
+if [ "$#" -ne 2 ]; then
+    echo "Invalid number of arguments, please enter the name of the project and database name"
     exit 255
 fi
 
@@ -19,7 +19,7 @@ fi
 source `which virtualenvwrapper.sh`
 
 PROJECT_NAME=$1
-DB_NAME=$PROJECT_NAME
+DB_NAME=$2
 VIRTUALENV_NAME=$PROJECT_NAME
 
 PROJECT_DIR=/vagrant/projects/$PROJECT_NAME
