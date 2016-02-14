@@ -9,17 +9,7 @@ Things preinstalled beyond the base trusty64 box include:
 * dependencies for Pillow, a drop-in replacement for the Python Imaging Library PIL
 * pip package manager
 * git
-* Node.js 4.x with npm packages:
-	* bower
-	* node-sass
-	* gulp
-	* requirejs
-	* browserify
-	* nodemon
-	* modernizr
-	* karma
-	* static-server
-	* angular-translate
+* Node.js 4.x
 
 Build instructions
 ------------------

@@ -15,8 +15,6 @@ apt-get install -y libjpeg-dev libtiff-dev zlib1g-dev libfreetype6-dev liblcms2-
 # Git
 apt-get install -y git
 
-## Major ##
-
 # Postgresql
 if ! command -v psql; then
     apt-get install -y postgresql libpq-dev
@@ -42,58 +40,6 @@ cp -p $GLOBAL_CONFIGURATIONS_DIR/start_project.sh /usr/local/bin/
 if ! command -v npm; then
     curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
     apt-get install -y nodejs
-fi
-
-## Minor ##
-
-# bower
-if ! command -v bower; then
-    npm install -g bower
-fi
-
-# SASS
-if ! command -v node-sass; then
-    npm install -g node-sass
-fi
-
-# gulp
-if ! command -v gulp; then
-    npm install -g gulp
-fi
-
-# requirejs
-if ! command -v r.js; then
-    npm install -g requirejs
-fi
-
-# browserify
-if ! command -v browserify; then
-    npm install -g browserify
-fi
-
-# nodemon
-if ! command -v nodemon; then
-    npm install -g nodemon
-fi
-
-# modernizr
-if ! command -v modernizr; then
-    npm install -g modernizr
-fi
-
-# karma
-if ! command -v karma; then
-    npm install -g karma
-fi
-
-# Static Server
-if ! command -v static-server; then
-    npm install -g static-server 
-fi
-
-# Angular Translate
-if ! command -v angular-translate; then
-    npm install -g angular-translate
 fi
 
 # Cleanup
