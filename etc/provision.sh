@@ -5,9 +5,9 @@ GLOBAL_CONFIGURATIONS_DIR=/vagrant/etc/configurations
 # Install essential packages from Apt
 apt-get update -y
 # Python dev packages
-apt-get install -y build-essential python python3-dev 
+apt-get install -y build-essential python python3 python3-dev python3-pip 
 # Install python-setuptools manually
-wget https://bootstrap.pypa.io/ez_setup.py -O - | python3.4
+wget https://bootstrap.pypa.io/ez_setup.py -O - | python3
 rm /home/vagrant/setuptools*
 # Dependencies for image processing with Pillow (drop-in replacement for PIL)
 # supporting: jpeg, tiff, png, freetype, littlecms
@@ -23,11 +23,8 @@ if ! command -v psql; then
 fi
 
 # virtualenv global setup
-if ! command -v pip; then
-    easy_install -U pip
-fi
 if [[ ! -f /usr/local/bin/virtualenv ]]; then
-    pip3.4 install virtualenv virtualenvwrapper stevedore virtualenv-clone
+    pip3 install virtualenv virtualenvwrapper stevedore virtualenv-clone
 fi
 
 # bash environment global setup
