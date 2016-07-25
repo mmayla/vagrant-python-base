@@ -19,7 +19,7 @@ To install locally:
 
 USAGE
 -----
-1. vagrant ssh
-2. type $source start_project [project_name]
-3. the script will create new folder and virtualenv enviornment for your project
-4. requirements.txt and .gitignore templates are placed in your project directory "project/[project_name]"
+1. `$ vagrant ssh`
+2. Type `$ source start_project [project_name] [DB Name]`
+3. The script will create new folder and virtualenv enviornment for your project
+4. `requirements.txt` and `.gitignore` templates are placed in your project directory "/vagrant/project/[project_name]"
