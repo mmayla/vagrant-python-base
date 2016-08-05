@@ -5,7 +5,7 @@ GLOBAL_CONFIGURATIONS_DIR=/vagrant/etc/configurations
 # Install essential packages from Apt
 apt-get update -y
 # Python dev packages
-apt-get install -y build-essential python python3 python3-dev python3-pip 
+apt-get install -y build-essential python python-dev python-pip python3 python3-dev python3-pip
 # Install python-setuptools manually
 wget https://bootstrap.pypa.io/ez_setup.py -O - | python3
 rm /home/vagrant/setuptools*
